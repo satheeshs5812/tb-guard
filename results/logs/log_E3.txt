@@ -1,0 +1,7 @@
+loaded 26009 traces 1.3098433017730713
+[E3] fold GPT: train=14549 val=2449 test=9011 test_calls=11231 viol=3418 time=200s
+[E3] fold Claude: train=18104 val=3349 test=4556 test_calls=4220 viol=846 time=47s
+[E3] fold Gemini: train=18474 val=2979 test=4556 test_calls=3402 viol=870 time=82s
+[E3] fold Llama: train=16415 val=3120 test=6474 test_calls=6195 viol=886 time=51s
+[E3] fold Cohere: train=20803 val=3794 test=1412 test_calls=944 viol=58 time=68s
+done 449.92150259017944

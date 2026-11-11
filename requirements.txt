@@ -1,0 +1,14 @@
+# Versions used to produce the paper's results (Python 3.13.18, CPU only).
+# For a CPU-only torch wheel:  pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0
+numpy==2.5.3
+pandas==2.3.3
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2
+networkx==3.7
+# statsmodels (0.14.6 in the original environment) is not imported by any script and is not required.
+#
+# Only needed for src/labels.py (ground-truth calls of the injection tasks). Install it from the
+# AgentDojo checkout at commit 089ed46 (package version 0.1.35); see README "Obtaining the AgentDojo traces":
+#   pip install -e data/agentdojo

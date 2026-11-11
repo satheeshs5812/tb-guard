@@ -1,0 +1,7 @@
+loaded 26009 traces 1.2528495788574219
+[E1] fold fold0: train=18097 val=3017 test=4895 test_calls=5505 viol=1489 time=145s
+[E1] fold fold1: train=17747 val=2748 test=5514 test_calls=5181 viol=1090 time=37s
+[E1] fold fold2: train=17938 val=2813 test=5258 test_calls=5426 viol=1171 time=39s
+[E1] fold fold3: train=17824 val=2891 test=5294 test_calls=5279 viol=1149 time=41s
+[E1] fold fold4: train=17554 val=3407 test=5048 test_calls=4601 viol=1179 time=46s
+done 310.839271068573

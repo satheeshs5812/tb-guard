@@ -1,0 +1,8 @@
+                 mean_ms  median_ms  p95_ms   max_ms
+TB_Guard_total     7.860      4.528  29.650  227.741
+TB_graph_build     2.405      1.327   9.010   72.511
+TB_line_scoring    4.701      2.407  19.288  153.988
+TB_gnn_forward     0.754      0.691   1.128    3.499
+B1_signature       0.373      0.138   1.500   16.538
+B2_content_clf     4.549      2.443  14.604  151.759
+n_nodes           18.764     16.000  41.000   69.000

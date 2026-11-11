@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or the released results, please cite the paper below."
+title: "TB-Guard: Runtime Detection of Cross-Agent Trust Boundary Violations in Tool-Augmented AI Systems"
+type: software
+license: MIT
+authors:
+  - family-names: "[Author family name]"
+    given-names: "[Author given name]"
+    affiliation: "[Affiliation]"
+repository-code: "https://github.com/[owner]/tb-guard"
+version: "1.0.0"
+date-released: "[YYYY-MM-DD]"
+keywords:
+  - prompt injection
+  - LLM agents
+  - provenance graphs
+  - graph neural networks
+  - AgentDojo
+preferred-citation:
+  type: article
+  title: "Runtime Detection of Cross-Agent Trust Boundary Violations in Tool-Augmented AI Systems"
+  authors:
+    - family-names: "[Author family name]"
+      given-names: "[Author given name]"
+  journal: "[Venue]"
+  year: "[Year]"
+  doi: "[DOI]"

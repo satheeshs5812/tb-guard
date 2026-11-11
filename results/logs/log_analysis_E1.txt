@@ -1,0 +1,89 @@
+thr_clean
+                 method  precision  recall     F1    FPR  FPR_benign_traces  AUPRC  ASR_before  ASR_after  prevention_rate  utility_retained  util_under_attack_before  util_under_attack_after
+0              TB_Guard      0.783   0.987  0.873  0.084              0.035  0.986       0.178      0.005            0.971             0.976                     0.519                    0.414
+1             TB_Policy      0.300   0.762  0.430  0.543              0.556  0.284       0.178      0.040            0.776             0.724                     0.519                    0.311
+2       TB_Policy_deleg      0.352   0.340  0.346  0.192              0.198  0.274       0.178      0.114            0.361             0.884                     0.519                    0.425
+3          B1_signature      0.311   0.936  0.467  0.633              0.042  0.306       0.178      0.012            0.933             0.986                     0.519                    0.269
+4        B2_content_clf      0.331   0.895  0.483  0.553              0.010  0.359       0.178      0.019            0.893             0.993                     0.519                    0.296
+5       B3_strict_taint      0.240   0.876  0.377  0.845              0.821  0.240       0.178      0.018            0.898             0.598                     0.519                    0.228
+6            B4_anomaly      0.374   0.040  0.073  0.021              0.037  0.388       0.178      0.168            0.053             0.978                     0.519                    0.512
+7           B5_flat_MLP      0.857   0.961  0.906  0.049              0.027  0.980       0.178      0.009            0.948             0.978                     0.519                    0.426
+8     TB_Guard_no_deriv      0.770   0.942  0.847  0.086              0.019  0.960       0.178      0.010            0.945             0.987                     0.519                    0.420
+9     TB_Guard_no_instr      0.891   0.928  0.909  0.035              0.026  0.968       0.178      0.014            0.919             0.980                     0.519                    0.431
+10  TB_Guard_no_endorse      0.844   0.982  0.908  0.055              0.027  0.988       0.178      0.005            0.970             0.983                     0.519                    0.423
+11    TB_Guard_lex_only      0.837   0.977  0.902  0.058              0.040  0.986       0.178      0.007            0.958             0.970                     0.519                    0.422
+thr
+                 method  precision  recall     F1    FPR  FPR_benign_traces  AUPRC  ASR_before  ASR_after  prevention_rate  utility_retained  util_under_attack_before  util_under_attack_after
+0              TB_Guard      0.963   0.926  0.944  0.011              0.005  0.986       0.178      0.015            0.916             0.997                     0.519                    0.438
+1             TB_Policy      0.300   0.762  0.430  0.543              0.556  0.284       0.178      0.040            0.776             0.724                     0.519                    0.311
+2       TB_Policy_deleg      0.352   0.340  0.346  0.192              0.198  0.274       0.178      0.114            0.361             0.884                     0.519                    0.425
+3          B1_signature      0.311   0.936  0.467  0.633              0.042  0.306       0.178      0.012            0.933             0.986                     0.519                    0.269
+4        B2_content_clf      0.464   0.024  0.045  0.008              0.000  0.359       0.178      0.173            0.028             1.000                     0.519                    0.514
+5       B3_strict_taint      0.240   0.876  0.377  0.845              0.821  0.240       0.178      0.018            0.898             0.598                     0.519                    0.228
+6            B4_anomaly      0.300   0.012  0.023  0.009              0.018  0.388       0.178      0.175            0.015             0.990                     0.519                    0.517
+7           B5_flat_MLP      0.962   0.905  0.933  0.011              0.010  0.980       0.178      0.019            0.892             0.993                     0.519                    0.439
+8     TB_Guard_no_deriv      0.957   0.822  0.884  0.011              0.005  0.960       0.178      0.027            0.850             0.996                     0.519                    0.444
+9     TB_Guard_no_instr      0.961   0.881  0.919  0.011              0.021  0.968       0.178      0.023            0.872             0.985                     0.519                    0.440
+10  TB_Guard_no_endorse      0.960   0.943  0.951  0.012              0.006  0.988       0.178      0.012            0.933             0.996                     0.519                    0.437
+11    TB_Guard_lex_only      0.956   0.954  0.955  0.013              0.012  0.986       0.178      0.011            0.937             0.992                     0.519                    0.437
+   exp                   vs  call_TB_only_correct  call_other_only_correct  call_mcnemar_p  call_discordant_OR  prev_TB_only  prev_other_only  prev_mcnemar_p   prev_OR  benign_kept_TB_only  benign_kept_other_only  benign_mcnemar_p  dAUPRC_rank  dAUPRC_boot_lo  dAUPRC_boot_hi  perm_p
+0   E1            TB_Policy                 11844                      252          0.0000             46.9089           680               85          0.0000    7.9591                  587                       4            0.0000       0.7018          0.6949          0.7096  0.0010
+1   E1      TB_Policy_deleg                  7377                      220          0.0000             33.4580          2401               42          0.0000   56.5059                  245                       4            0.0000       0.7121          0.7047          0.7195  0.0010
+2   E1         B1_signature                 12736                      405          0.0000             31.4094           171              242          0.0006    0.7072                   30                       7            0.0002       0.6801          0.6724          0.6875  0.0010
+3   E1       B2_content_clf                  5666                      233          0.0000             24.2677          3785               16          0.0000  229.4242                    0                       7            0.0156       0.6274          0.6180          0.6368  0.0010
+4   E1      B3_strict_taint                 17314                      403          0.0000             42.9108           324              244          0.0009    1.3272                  855                       4            0.0000       0.7464          0.7403          0.7525  0.0010
+5   E1           B4_anomaly                  5724                      216          0.0000             26.4411          3829                5          0.0000  696.2727                   21                       6            0.0059       0.5982          0.5831          0.6115  0.0010
+6   E1          B5_flat_MLP                   347                      218          0.0000              1.5904           153               49          0.0000    3.1010                   10                       1            0.0117       0.0056          0.0039          0.0071  0.0010
+7   E1    TB_Guard_no_deriv                   877                      237          0.0000              3.6947           347               64          0.0000    5.3876                    3                       2            1.0000       0.0261          0.0226          0.0294  0.0010
+8   E1    TB_Guard_no_instr                   532                      259          0.0000              2.0520           255               68          0.0000    3.7299                   29                       3            0.0000       0.0185          0.0149          0.0221  0.0010
+9   E1  TB_Guard_no_endorse                   173                      253          0.0001              0.6844            39              111          0.0000    0.3543                    3                       1            0.6250      -0.0018         -0.0030         -0.0007  0.0010
+10  E1    TB_Guard_lex_only                   229                      348          0.0000              0.6585            46              135          0.0000    0.3432                   12                       1            0.0034      -0.0001         -0.0013          0.0012  0.8551
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:469: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+/usr/local/lib/python3.13/site-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+done 270.43702363967896

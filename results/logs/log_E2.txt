@@ -1,0 +1,6 @@
+loaded 26009 traces 1.217698574066162
+[E2] fold banking: train=17567 val=3050 test=5392 test_calls=4791 viol=1774 time=290s
+[E2] fold slack: train=18573 val=3299 test=4137 test_calls=11877 viol=2570 time=79s
+[E2] fold travel: train=18202 val=3167 test=4640 test_calls=1880 viol=518 time=32s
+[E2] fold workspace: train=12055 val=2114 test=11840 test_calls=7444 viol=1216 time=32s
+done 435.2753336429596

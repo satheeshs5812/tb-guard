@@ -1,0 +1,2 @@
+traces 26009 tau 0.4
+unique lines 15701 priv calls 25992 violations 6078 nodes 421291
